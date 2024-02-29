@@ -23,6 +23,47 @@
 
     delete product.newProperty;
     console.log(product);
+
+
+    const product2 = {
+      name: 'shirt',
+      'delivery-time': '1 day',
+      rating: {
+        stars: 4.5,
+        count: 87
+      },
+      fun: function function1() {
+        console.log('function inside object');
+      }
+    };
+
+    
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);
+    console.log(product2['delvery-time']);
+    
+    console.log(product2.rating.count);
+    product2.fun();
+
+    console.log(typeof console.log);
+
+
+    //JSON to js and js to JSON string
+    console.log(JSON.stringify(product2));
+    
+    const jsonString = JSON.stringify(product2);
+    
+    //Convert back to an object
+    console.log(JSON.parse(jsonString));
+    JSON.parse()
+
+
+
+    //Local storage
+    localStorage.getItem('message');
+    localStorage.setItem('message', 'hello');
+    
   </script>
 </body>
 </html>
