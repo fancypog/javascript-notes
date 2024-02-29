@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="btn">Second button</button>
+
+
+  <script>
+    document.body.innerHTML = 'hello';
+    document.title = 'Good job!';
+    console.log(document.title);
+    dcument.title = 'Changed';
+
+    console.log(typeof document.body); //HTML element of body coverted into js object
+    
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button>Good job!</button>';
+
+    //Change one part
+    console.log(document.querySelector('button').innerHTML);
+    document.querySelector('button') //select the first one
+      .innetHTML = 'Changed';
+
+    console.log(document.querySelector('.btn')); //class selector
+    const buttonElement = document.querySelector('.btn');
+    console.log(buttonElement); //Save the selected element
+  
+  
+  </script>
+</body>
+</html>
