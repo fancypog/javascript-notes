@@ -1,5 +1,7 @@
 const todoList = [];
 
+removeEventListener();
+
 function addTodo() {
   const inputElement = document.querySelector('.js-name-input');
   const name = inputElement.value;
@@ -8,6 +10,7 @@ function addTodo() {
   console.log(todoList);
 
   inputElement.value = '';
+
 }
 
 function renderTodoList() {
@@ -29,11 +32,13 @@ function renderTodoList() {
     todoListHTML += html;
   }
   console.log(todoListHTML);
+
+  document.querySelector('.js-todo-list')
+  .innerHTML = todoListHTML;
+
 }
 
 
-document.querySelector('.js-todo-list')
-  .innerHTML = todoListHTML;
 
 function addTodo() {
   const inputElement = document.querySelector('.js-name-input');
@@ -43,5 +48,7 @@ function addTodo() {
   console.log(todoList);
 
   inputElement.value = '';
+
+  renderTodoList();
 }
 
